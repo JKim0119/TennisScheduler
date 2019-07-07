@@ -160,8 +160,7 @@ def deleteDB():
 				})
 
 
-if __name__ == '__main__':
-	#deleteDB()
+def main(event=None, handler=None):
 	tourneyList = current_tourneys()
 	for eachTourney in tourneyList:
 		if(eventDayChanged(eachTourney)):
@@ -171,4 +170,8 @@ if __name__ == '__main__':
 			updateDB(playersList)
 		else:
 			print("No changes")
+
+if __name__ == '__main__':
+	#deleteDB()
+	main('hello', 'world')
 	#pprint.pprint(playersList)
