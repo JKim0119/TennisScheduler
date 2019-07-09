@@ -88,6 +88,7 @@ def players(tournament):
 					if(type(cont) is bs4.element.Tag):
 						if(cont.has_attr('data-ga-label')):
 							#print(cont.attrs['data-ga-label'])
+							# NEED TO TAKE INTO DOUBLES PLAYERS THAT WILL SHOW UP IN THIS AREA
 							setDict(info, cont.attrs['data-ga-label'], court, time, day, orderOfPlay, tourney, tourney_location)
 						else:
 							twoPlayers = False
